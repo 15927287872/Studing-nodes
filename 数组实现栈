@@ -1,0 +1,49 @@
+#define max 100
+class stack
+{
+    stack();
+    private：
+          int rear;
+          int arr[max];
+    public:
+          void push(int);
+          void pop(int &);
+          int top();
+          bool full();
+          bool empty();
+}
+stack::stack()
+{
+    this->rear = 0;
+}
+void stack::push(int value)
+{
+    if(full())
+        return ;
+    arr[this->rear] = data;
+    this->rear++; 
+}
+void stack::pop()
+{
+    if(empty())
+        return ;
+    this->rear --;
+}
+int stack::top()
+{
+    return arr[this->rear];
+}
+bool stack::empty()
+{
+    if(rear == 0)
+    return ture;
+    else
+    return false;
+}
+bool stack::full()
+{
+    if(rear == max)
+    return true;
+    else
+    return false;
+}
